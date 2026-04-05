@@ -18,7 +18,6 @@
             line-height: 1.6;
         }
 
-        /* Фон с космической текстурой */
         body::before {
             content: "";
             position: fixed;
@@ -34,7 +33,6 @@
             pointer-events: none;
         }
 
-        /* Навигация (вкладки) */
         .nav-bar {
             background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(8px);
@@ -73,8 +71,7 @@
             padding: 2rem 1.5rem;
         }
 
-        /* Видео блок */
-        .video-hero {
+        .hero-block {
             background: #000000aa;
             border-radius: 28px;
             padding: 1.5rem;
@@ -84,30 +81,30 @@
             text-align: center;
         }
 
-        .video-hero h1 {
+        .hero-block h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
             text-shadow: 0 0 8px #ffaa33;
         }
 
-        .video-wrapper {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 */
-            height: 0;
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        .static-image {
             margin: 1.5rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
-        .video-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .static-image img {
             width: 100%;
-            height: 100%;
-            border: none;
-            border-radius: 20px;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image-caption {
+            font-style: italic;
+            margin-top: 0.5rem;
+            color: #ddd;
         }
 
         .section-title {
@@ -117,7 +114,6 @@
             margin: 2rem 0 1.5rem 0;
         }
 
-        /* Галерея реальных фото */
         .gallery {
             display: flex;
             flex-wrap: wrap;
@@ -153,7 +149,6 @@
             text-align: center;
         }
 
-        /* Футер с источниками */
         .footer {
             background: rgba(0, 0, 0, 0.8);
             margin-top: 3rem;
@@ -184,7 +179,7 @@
         @media (max-width: 700px) {
             .nav-bar a { font-size: 0.9rem; padding: 0.3rem 0.8rem; }
             .section-title { font-size: 1.6rem; }
-            .video-hero h1 { font-size: 1.8rem; }
+            .hero-block h1 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -198,44 +193,48 @@
 </div>
 
 <div class="container">
-    <div class="video-hero">
+    <!-- Блок вместо первого видео: взлёт ракеты -->
+    <div class="hero-block">
         <h1>12 апреля — День космонавтики</h1>
-        <p>Первый полёт человека в космос — веха, изменившая историю человечества. <br>Смотрите реальный пуск ракеты «Восток» с Юрием Гагариным.</p>
-        <div class="video-wrapper">
-            <!-- Видео взлёта ракеты (реальная хроника, YouTube) -->
-            <iframe src="https://www.youtube.com/embed/ricE_3M8e0A?start=30&autoplay=0&rel=0" title="Пуск ракеты Восток" allowfullscreen></iframe>
+        <p>Первый полёт человека в космос — веха, изменившая историю человечества.</p>
+        <div class="static-image">
+            <img src="images/vostok_launch.jpg" alt="Пуск ракеты Восток" onerror="this.src='https://via.placeholder.com/800x450?text=Фото+пуска+ракеты'">
         </div>
-        <p><em>Кадры пуска ракеты-носителя «Восток», 12 апреля 1961 года.</em></p>
+        <div class="image-caption">Пуск ракеты-носителя «Восток» с космодрома Байконур, 12 апреля 1961 года.</div>
     </div>
 
+    <!-- Галерея реальных фотографий (остаётся как есть) -->
     <div class="section-title">📸 Реальные фотографии из истории космоса</div>
     <div class="gallery">
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Yuri_Gagarin_%28cropped%29.jpg" alt="Юрий Гагарин">
+            <img src="images/gagarin.jpg" alt="Юрий Гагарин" onerror="this.src='https://via.placeholder.com/280x180?text=Фото+не+найдено'">
             <p>Юрий Гагарин — первый человек в космосе</p>
         </div>
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg" alt="Земля из космоса">
+            <img src="images/earth_from_apollo.jpg" alt="Земля из космоса" onerror="this.src='https://via.placeholder.com/280x180?text=Фото+не+найдено'">
             <p>Вид Земли с борта Apollo 17 (1972)</p>
         </div>
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Apollo_11_Launch_-_GPN-2000-000630.jpg/640px-Apollo_11_Launch_-_GPN-2000-000630.jpg" alt="Пуск Аполлон-11">
+            <img src="images/apollo11_launch.jpg" alt="Пуск Аполлон-11" onerror="this.src='https://via.placeholder.com/280x180?text=Фото+не+найдено'">
             <p>Пуск Apollo 11, первая высадка на Луну</p>
         </div>
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Laika_%28Soviet_dog%29.jpg/800px-Laika_%28Soviet_dog%29.jpg" alt="Собака Лайка">
+            <img src="images/laika.jpg" alt="Собака Лайка" onerror="this.src='https://via.placeholder.com/280x180?text=Фото+не+найдено'">
             <p>Лайка — первое животное на орбите</p>
         </div>
     </div>
 
-    <div class="section-title">🎥 Короткое видео о Дне космонавтики</div>
-    <div class="video-wrapper" style="margin-top: 0;">
-        <iframe src="https://www.youtube.com/embed/W_UHYzJl5sk?rel=0" title="День космонавтики — история" allowfullscreen></iframe>
+    <!-- Блок вместо второго видео: историческая хроника (фото) -->
+    <div class="section-title">📷 Исторический момент первого полёта</div>
+    <div class="hero-block" style="margin-top: 0;">
+        <div class="static-image">
+            <img src="images/gagarin_media.jpg" alt="Юрий Гагарин перед полётом" onerror="this.src='https://via.placeholder.com/800x450?text=Гагарин+перед+стартом'">
+        </div>
+        <div class="image-caption">Юрий Гагарин в автобусе по пути к стартовой площадке, 12 апреля 1961 года.</div>
+        <p style="margin-top: 1rem;">108 минут полёта, один виток вокруг Земли — и мир навсегда изменился.</p>
     </div>
-    <p style="text-align: center; margin-top: 0.5rem;">Историческая хроника первого полёта человека в космос.</p>
 </div>
 
-<!-- Футер с источниками книг и ссылкой на полный список -->
 <div class="footer">
     <div style="margin-bottom: 0.8rem;">📖 <strong>Основная литература по теме:</strong></div>
     <div class="book-list">
