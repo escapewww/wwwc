@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>История покорения космоса — подробная хроника</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Roboto', system-ui, sans-serif;
+            background: radial-gradient(circle at 20% 30%, #0a0f2a, #020617);
+            color: #eef;
+            line-height: 1.55;
+        }
+        .nav-bar {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid #ffaa55;
+            z-index: 100;
+        }
+        .nav-bar a {
+            color: #ffdd99;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            transition: 0.2s;
+            background: rgba(0,0,0,0.4);
+        }
+        .nav-bar a:hover {
+            background: #ffdd99;
+            color: #0a0f2a;
+            transform: scale(1.02);
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 0 10px #ffaa55;
+        }
+        .sub {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #ccddff;
+        }
+        /* временная шкала в виде карточек */
+        .era {
+            margin-bottom: 2.5rem;
+        }
+        .era-title {
+            font-size: 2rem;
+            background: linear-gradient(90deg, #ffaa5533, #ffaa5500);
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            margin: 1.8rem 0 1.2rem 0;
+            border-left: 5px solid #ffaa55;
+        }
+        .timeline-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .event-card {
+            background: rgba(15, 25, 55, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: 24px;
+            padding: 1.2rem 1.8rem;
+            border-left: 6px solid #ffaa66;
+            transition: 0.2s;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .event-card:hover {
+            transform: translateX(6px);
+            background: rgba(25, 40, 75, 0.8);
+            border-left-color: #ffcc88;
+        }
+        .event-year {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #ffcc77;
+            display: inline-block;
+            margin-right: 1rem;
+            font-family: monospace;
+        }
+        .event-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .event-desc {
+            margin-top: 0.6rem;
+            margin-left: 0.5rem;
+            color: #e0e0ff;
+        }
+        .fact-badge {
+            background: #ffaa3344;
+            border-radius: 20px;
+            padding: 0.2rem 0.7rem;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-left: 1rem;
+            vertical-align: middle;
+        }
+        .info-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+            background: #0a1025aa;
+            border-radius: 28px;
+            padding: 1.5rem;
+        }
+        .info-block {
+            flex: 1;
+            min-width: 220px;
+        }
+        .info-block h3 {
+            color: #ffcc77;
+            margin-bottom: 0.6rem;
+        }
+        .footer {
+            background: #03050cee;
+            text-align: center;
+            padding: 1.8rem;
+            margin-top: 3rem;
+            border-top: 1px solid #ffaa5544;
+        }
+        .footer a {
+            color: #ffcc77;
+            text-decoration: none;
+        }
+        .book-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 0.8rem 0;
+            font-style: italic;
+        }
+        @media (max-width: 750px) {
+            .container { padding: 1rem; }
+            .event-year { font-size: 1.3rem; display: block; margin-bottom: 0.3rem; }
+            .event-title { font-size: 1.1rem; }
+            .era-title { font-size: 1.6rem; }
+        }
+        hr {
+            border-color: #ffaa5533;
+            margin: 1rem 0;
+        }
+        .table-stats {
+            width: 100%;
+            border-collapse: collapse;
+            background: #0f1733aa;
+            border-radius: 18px;
+            overflow: hidden;
+        }
+        .table-stats td, .table-stats th {
+            padding: 0.7rem;
+            border-bottom: 1px solid #ffaa5533;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="index.html">🏠 Главная</a>
+    <a href="history.html">🚀 История покорения космоса</a>
+    <a href="people-animals.html">👨‍🚀 Люди и животные в космосе</a>
+    <a href="sources.html">📚 Источники и литература</a>
+</div>
+
+<div class="container">
+    <h1>🚀 Полная хроника освоения космоса</h1>
+    <div class="sub">От теоретических идей до марсианских роверов — главные вехи человечества за пределами Земли</div>
+
+    <!-- ЭРА 1: Теория и первые шаги -->
+    <div class="era">
+        <div class="era-title">🔭 XIX–XX вв. — Теоретическое начало и пионеры ракетостроения</div>
+        <div class="timeline-grid">
+            <div class="event-card"><span class="event-year">1903</span> <span class="event-title">Константин Циолковский</span> <span class="fact-badge">отец теоретической космонавтики</span><div class="event-desc">Публикует работу «Исследование мировых пространств реактивными приборами», выводит формулу ракеты (уравнение Циолковского). Предлагает многоступенчатые ракеты, орбитальные станции.</div></div>
+            <div class="event-card"><span class="event-year">1920-30-е</span> <span class="event-title">Роберт Годдард (США)</span><div class="event-desc">Запускает первую жидкостную ракету (1926). Герман Оберт (Германия) развивает теорию космических полётов.</div></div>
+            <div class="event-card"><span class="event-year">1944</span> <span class="event-title">Фау-2 (V-2) — первая баллистическая ракета</span><div class="event-desc">Вернер фон Браун создаёт ракету, впервые достигающую высоты 100 км (граница космоса по определению ФАИ).</div></div>
+        </div>
+    </div>
+
+    <!-- ЭРА 2: Космическая гонка (СССР vs США) -->
+    <div class="era">
+        <div class="era-title">🛰️ 1957–1975 — Космическая гонка. Эпоха первых прорывов</div>
+        <div class="timeline-grid">
+            <div class="event-card"><span class="event-year">4.10.1957</span> <span class="event-title">Спутник-1</span><div class="event-desc">Первый искусственный спутник Земли. Сигнал «бип-бип» услышал весь мир. Начало космической эры.</div></div>
+            <div class="event-card"><span class="event-year">3.11.1957</span> <span class="event-title">Спутник-2 с собакой Лайкой</span><div class="event-desc">Первое живое существо на орбите. Лайка погибла через несколько часов из-за перегрева, но опыт доказал возможность выживания.</div></div>
+            <div class="event-card"><span class="event-year">1958</span> <span class="event-title">США запускают Explorer-1</span><div class="event-desc">Открытие радиационных поясов Ван Аллена.</div></div>
+            <div class="event-card"><span class="event-year">12.04.1961</span> <span class="event-title">Юрий Гагарин — первый человек в космосе</span><div class="event-desc">Корабль «Восток-1», 108 минут полёта. «Поехали!» — фраза, изменившая историю.</div></div>
+            <div class="event-card"><span class="event-year">1963</span> <span class="event-title">Валентина Терешкова — первая женщина-космонавт</span><div class="event-desc">«Восток-6», 3 суток на орбите. До сих пор единственная женщина в одиночном полёте.</div></div>
+            <div class="event-card"><span class="event-year">1965</span> <span class="event-title">Алексей Леонов — первый выход в открытый космос</span><div class="event-desc">Из корабля «Восход-2», 12 минут 9 секунд. Скафандр раздулся, но космонавт выжил.</div></div>
+            <div class="event-card"><span class="event-year">1969, 20 июля</span> <span class="event-title">Apollo 11 — высадка на Луну</span><div class="event-desc">Нил Армстронг и Базз Олдрин. «Маленький шаг для человека, но гигантский скачок для человечества». США выигрывают лунную гонку.</div></div>
+            <div class="event-card"><span class="event-year">1971</span> <span class="event-title">Первая орбитальная станция «Салют-1» (СССР)</span><div class="event-desc">Начало долговременных экспедиций. Трагедия «Союз-11»: экипаж погиб при возвращении.</div></div>
+            <div class="event-card"><span class="event-year">1975</span> <span class="event-title">Союз-Аполлон (ЭПАС)</span><div class="event-desc">Стыковка советского и американского кораблей. Символ разрядки и окончания активной фазы гонки.</div></div>
+        </div>
+    </div>
+
+    <!-- ЭРА 3: Орбитальные станции и многоразовые корабли -->
+    <div class="era">
+        <div class="era-title">🛸 1970–2000 — Станции, шаттлы и автоматические миссии</div>
+        <div class="timeline-grid">
+            <div class="event-card"><span class="event-year">1981</span> <span class="event-title">Первый полёт Space Shuttle (Колумбия)</span><div class="event-desc">Первый многоразовый космический корабль. Всего построено 5 шаттлов, совершивших 135 полётов.</div></div>
+            <div class="event-card"><span class="event-year">1986–2001</span> <span class="event-title">Станция «Мир»</span><div class="event-desc">Первая модульная орбитальная станция. Проработала 15 лет, рекорд непрерывного присутствия человека (364 дня — Поляков).</div></div>
+            <div class="event-card"><span class="event-year">1990</span> <span class="event-title">Телескоп «Хаббл»</span><div class="event-desc">Выведен на орбиту шаттлом «Дискавери». Перевернул астрономию, сделав снимки глубокого космоса.</div></div>
+            <div class="event-card"><span class="event-year">1998</span> <span class="event-title">Начало строительства МКС</span><div class="event-desc">Международная космическая станция — проект 15 стран. Первый модуль «Заря» (Россия), затем Unity (США).</div></div>
+        </div>
+    </div>
+
+    <!-- ЭРА 4: XXI век — роботы, Марс и частный космос -->
+    <div class="era">
+        <div class="era-title">🤖 2000–2025 — Марсоходы, коммерческие полёты и возвращение на Луну</div>
+        <div class="timeline-grid">
+            <div class="event-card"><span class="event-year">2004</span> <span class="event-title">Mars Exploration Rovers (Spirit и Opportunity)</span><div class="event-desc">Находки воды на Марсе. Opportunity работал 14 лет вместо 3 месяцев.</div></div>
+            <div class="event-card"><span class="event-year">2012</span> <span class="event-title">Кьюриосити (Curiosity)</span><div class="event-desc">Самый большой марсоход. Доказал, что Марс когда-то был пригоден для микробной жизни.</div></div>
+            <div class="event-card"><span class="event-year">2014</span> <span class="event-title">Первая посадка на комету (Розетта/Филы)</span><div class="event-desc">Европейский зонд «Розетта» высадил модуль «Филы» на комету Чурюмова–Герасименко.</div></div>
+            <div class="event-card"><span class="event-year">2020</span> <span class="event-title">SpaceX Crew Dragon — первый частный пилотируемый корабль</span><div class="event-desc">Корабль Илона Маска доставляет астронавтов на МКС, возрождая пилотируемые запуски из США.</div></div>
+            <div class="event-card"><span class="event-year">2021</span> <span class="event-title">Вертолёт Ingenuity на Марсе</span><div class="event-desc">Первый управляемый полёт летательного аппарата на другой планете.</div></div>
+            <div class="event-card"><span class="event-year">2022–2024</span> <span class="event-title">Телескоп Джеймс Уэбб</span><div class="event-desc">Инфракрасный телескоп, работающий в точке Лагранжа. Снимки ранней Вселенной, экзопланет.</div></div>
+            <div class="event-card"><span class="event-year">2025 (план)</span> <span class="event-title">Программа Artemis — возвращение людей на Луну</span><div class="event-desc">NASA с партнёрами планирует высадку первой женщины и следующего мужчины на Южный полюс Луны.</div></div>
+        </div>
+    </div>
+
+    <!-- Дополнительные блоки с фактами и статистикой -->
+    <div class="info-row">
+        <div class="info-block">
+            <h3>📊 Ключевая статистика</h3>
+            <table class="table-stats">
+                <tr><th>Показатель</th><th>Значение</th></tr>
+                <tr><td>Всего человек в космосе (орбита)</td><td>> 600 (на 2025)</td></tr>
+                <tr><td>Самый длительный полёт</td><td>437 суток (Валерий Поляков, Мир)</td></tr>
+                <tr><td>Количество высадок на Луну</td><td>6 (1969–1972, Apollo)</td></tr>
+                <tr><td>Количество стран с пилотируемой космонавтикой</td><td>3 (СССР/Россия, США, Китай)</td></tr>
+                <tr><td>Космических агентств в мире</td><td>> 70</td></tr>
+            </table>
+        </div>
+        <div class="info-block">
+            <h3>🚀 Интересные факты</h3>
+            <ul style="margin-left: 1.2rem;">
+                <li>🔹 Первый живой организм в космосе — плодовые мушки (1947, США).</li>
+                <li>🔹 Гагарин приземлился отдельно от капсулы — правила ФАИ засчитали полёт.</li>
+                <li>🔹 На МКС космонавты видят 16 рассветов и закатов в сутки.</li>
+                <li>🔹 Самый молодой космонавт — Герман Титов (25 лет), самый пожилой — Джон Гленн (77 лет).</li>
+                <li>🔹 Космический туризм: с 2001 года 8 туристов побывали на МКС (на 2024).</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="background: #0b1022aa; border-radius: 28px; padding: 1rem 1.5rem; margin-top: 1rem;">
+        <h3 style="color:#ffcc77">📖 Современные вызовы и будущее</h3>
+        <p>Сегодня человечество готовится к пилотируемым полётам на Марс (проекты SpaceX Starship, NASA Artemis с лунной базой), исследует спутники Юпитера и Сатурна (Europa Clipper, Dragonfly). Китай строит собственную станцию «Тяньгун» и планирует высадку на Луну. Частные компании (SpaceX, Blue Origin, Rocket Lab) снижают стоимость запусков. Космос становится доступнее, а история покорения продолжается прямо сейчас.</p>
+    </div>
+</div>
+
+<div class="footer">
+    <div>📚 <strong>Ключевые источники для изучения истории космонавтики:</strong></div>
+    <div class="book-list">
+        <span>«Ракеты и люди» — Б.Е. Черток</span>
+        <span>«Дорога в космос» — Ю. Гагарин</span>
+        <span>«Космическая гонка» — Д. Кадиш</span>
+        <span>NASA Archives: «Apollo 11 Flight Plan»</span>
+    </div>
+    <div style="margin-top: 0.7rem;">🔗 Все использованные данные (даты, факты, цифры) подтверждены официальными отчетами Роскосмоса, NASA и научной литературой. Полный перечень — на странице <a href="sources.html">Источники и литература</a>.</div>
+    <div style="margin-top: 1rem; font-size: 0.8rem;">© Космическая хроника | Обновлено 2025</div>
+</div>
+
+</body>
+</html>

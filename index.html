@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>День космонавтики — Главная</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0a0f2a 0%, #0a1a3a 100%);
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        /* Фон с космической текстурой */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274_1280.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* Навигация (вкладки) */
+        .nav-bar {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .nav-bar a {
+            color: #ffd966;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            transition: 0.3s;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-bar a:hover {
+            background: #ffd966;
+            color: #0a0f2a;
+            transform: scale(1.02);
+            box-shadow: 0 0 12px rgba(255, 217, 0, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Видео блок */
+        .video-hero {
+            background: #000000aa;
+            border-radius: 28px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 200, 100, 0.3);
+            text-align: center;
+        }
+
+        .video-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 8px #ffaa33;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            margin: 1.5rem 0;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            border-left: 6px solid #ffaa33;
+            padding-left: 1rem;
+            margin: 2rem 0 1.5rem 0;
+        }
+
+        /* Галерея реальных фото */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .card {
+            background: rgba(10, 20, 45, 0.7);
+            backdrop-filter: blur(8px);
+            border-radius: 20px;
+            overflow: hidden;
+            width: 280px;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255, 200, 100, 0.4);
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card p {
+            padding: 0.8rem;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        /* Футер с источниками */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            margin-top: 3rem;
+            padding: 1.8rem;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #ffaa3344;
+        }
+
+        .footer a {
+            color: #ffcc77;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .book-list {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        @media (max-width: 700px) {
+            .nav-bar a { font-size: 0.9rem; padding: 0.3rem 0.8rem; }
+            .section-title { font-size: 1.6rem; }
+            .video-hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="index.html">🏠 Главная</a>
+    <a href="history.html">🚀 История покорения космоса</a>
+    <a href="people-animals.html">👨‍🚀 Люди и животные в космосе</a>
+    <a href="sources.html">📚 Источники и литература</a>
+</div>
+
+<div class="container">
+    <div class="video-hero">
+        <h1>12 апреля — День космонавтики</h1>
+        <p>Первый полёт человека в космос — веха, изменившая историю человечества. <br>Смотрите реальный пуск ракеты «Восток» с Юрием Гагариным.</p>
+        <div class="video-wrapper">
+            <!-- Видео взлёта ракеты (реальная хроника, YouTube) -->
+            <iframe src="https://www.youtube.com/embed/ricE_3M8e0A?start=30&autoplay=0&rel=0" title="Пуск ракеты Восток" allowfullscreen></iframe>
+        </div>
+        <p><em>Кадры пуска ракеты-носителя «Восток», 12 апреля 1961 года.</em></p>
+    </div>
+
+    <div class="section-title">📸 Реальные фотографии из истории космоса</div>
+    <div class="gallery">
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Yuri_Gagarin_%28cropped%29.jpg" alt="Юрий Гагарин">
+            <p>Юрий Гагарин — первый человек в космосе</p>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg" alt="Земля из космоса">
+            <p>Вид Земли с борта Apollo 17 (1972)</p>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Apollo_11_Launch_-_GPN-2000-000630.jpg/640px-Apollo_11_Launch_-_GPN-2000-000630.jpg" alt="Пуск Аполлон-11">
+            <p>Пуск Apollo 11, первая высадка на Луну</p>
+        </div>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Laika_%28Soviet_dog%29.jpg/800px-Laika_%28Soviet_dog%29.jpg" alt="Собака Лайка">
+            <p>Лайка — первое животное на орбите</p>
+        </div>
+    </div>
+
+    <div class="section-title">🎥 Короткое видео о Дне космонавтики</div>
+    <div class="video-wrapper" style="margin-top: 0;">
+        <iframe src="https://www.youtube.com/embed/W_UHYzJl5sk?rel=0" title="День космонавтики — история" allowfullscreen></iframe>
+    </div>
+    <p style="text-align: center; margin-top: 0.5rem;">Историческая хроника первого полёта человека в космос.</p>
+</div>
+
+<!-- Футер с источниками книг и ссылкой на полный список -->
+<div class="footer">
+    <div style="margin-bottom: 0.8rem;">📖 <strong>Основная литература по теме:</strong></div>
+    <div class="book-list">
+        <span>«Дорога в космос» — Ю. Гагарин</span>
+        <span>«Ракеты и люди» — Б. Черток</span>
+        <span>«Звёздные корабли» — И. Брандт</span>
+    </div>
+    <div style="margin-top: 0.8rem;">
+        📚 Полный список источников, книг и веб-ресурсов — на странице 
+        <a href="sources.html">«Источники и литература»</a>
+    </div>
+    <div style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.7;">© Космическая энциклопедия, 2025 | Данные открыты и проверены</div>
+</div>
+
+</body>
+</html>

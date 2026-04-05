@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Люди и животные в космосе</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(145deg, #050d1f 0%, #0a142e 100%);
+            color: #f2f2f2;
+        }
+        .nav-bar {
+            background: #000000aa;
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            border-bottom: 1px solid #ffaa55;
+        }
+        .nav-bar a {
+            color: #ffdd99;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+        }
+        .nav-bar a:hover {
+            background: #ffdd99;
+            color: #121c2c;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem 1.5rem;
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 0 0 5px gold;
+        }
+        h2 {
+            font-size: 2rem;
+            border-bottom: 3px solid #ffaa55;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin: 2rem 0 1.5rem 0;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            justify-content: center;
+        }
+        .person-card, .animal-card {
+            background: rgba(30, 40, 70, 0.65);
+            backdrop-filter: blur(5px);
+            border-radius: 28px;
+            width: 260px;
+            padding: 1rem;
+            text-align: center;
+            transition: 0.2s;
+            border: 1px solid rgba(255, 200, 100, 0.4);
+        }
+        .person-card img, .animal-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+        }
+        .person-card h3, .animal-card h3 {
+            color: #ffd966;
+            margin-bottom: 0.3rem;
+        }
+        .footer {
+            background: #02050cee;
+            margin-top: 3rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .footer a {
+            color: #ffcc77;
+        }
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        @media (max-width: 700px) {
+            .person-card, .animal-card { width: 220px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <a href="index.html">🏠 Главная</a>
+    <a href="history.html">🚀 История покорения космоса</a>
+    <a href="people-animals.html">👨‍🚀 Люди и животные в космосе</a>
+    <a href="sources.html">📚 Источники и литература</a>
+</div>
+
+<div class="container">
+    <h1>👩‍🚀 Первопроходцы космоса и их четвероногие предшественники</h1>
+    
+    <div style="text-align: center;">
+        <h2>👨‍🚀 Знаменитые космонавты и астронавты</h2>
+    </div>
+    <div class="grid">
+        <div class="person-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Yuri_Gagarin_%28cropped%29.jpg" alt="Гагарин">
+            <h3>Юрий Гагарин</h3>
+            <p>12.04.1961, «Восток-1» — первый человек в космосе.</p>
+        </div>
+        <div class="person-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Valentina_Tereshkova_%281969%29.jpg/800px-Valentina_Tereshkova_%281969%29.jpg" alt="Терешкова">
+            <h3>Валентина Терешкова</h3>
+            <p>Первая женщина-космонавт (1963, «Восток-6»).</p>
+        </div>
+        <div class="person-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Alexei_Leonov_%28cropped%29.jpg/800px-Alexei_Leonov_%28cropped%29.jpg" alt="Леонов">
+            <h3>Алексей Леонов</h3>
+            <p>Первый выход в открытый космос (1965).</p>
+        </div>
+        <div class="person-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Neil_Armstrong_pose.jpg" alt="Армстронг">
+            <h3>Нил Армстронг</h3>
+            <p>Первый человек на Луне, Apollo 11 (1969).</p>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <h2>🐕 Животные — пионеры космоса</h2>
+    </div>
+    <div class="grid">
+        <div class="animal-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Laika_%28Soviet_dog%29.jpg/800px-Laika_%28Soviet_dog%29.jpg" alt="Лайка">
+            <h3>Лайка</h3>
+            <p>Первое животное на орбите (1957, Спутник-2).</p>
+        </div>
+        <div class="animal-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Belka_and_Strelka.jpg/800px-Belka_and_Strelka.jpg" alt="Белка и Стрелка">
+            <h3>Белка и Стрелка</h3>
+            <p>Первые животные, вернувшиеся на Землю (1960).</p>
+        </div>
+        <div class="animal-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Monkey_in_space.jpg/800px-Monkey_in_space.jpg" alt="Обезьяна Хэм">
+            <h3>Шимпанзе Хэм</h3>
+            <p>Первое гоминидное животное в космосе (1961, США).</p>
+        </div>
+        <div class="animal-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Zvyozdochka.jpg/800px-Zvyozdochka.jpg" alt="Звёздочка">
+            <h3>Собака Звёздочка</h3>
+            <p>Последний тренировочный полёт перед полётом Гагарина.</p>
+        </div>
+        <div class="animal-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Felix_%28cat%29.jpg/800px-Felix_%28cat%29.jpg" alt="Кот Феликс">
+            <h3>Кот Феликс (Франция)</h3>
+            <p>Первый кот, побывавший в суборбитальном полёте (1963).</p>
+        </div>
+    </div>
+    <p style="margin-top: 2rem; background: #00000066; padding: 0.8rem; border-radius: 20px; text-align: center;">
+        🌟 Благодаря этим героям и животным человечество шагнуло к звёздам. Многие из них заплатили жизнью — память навсегда.
+    </p>
+</div>
+
+<div class="footer">
+    <div>📚 <strong>Книги о первых космонавтах и животных:</strong></div>
+    <div class="book-list">
+        <span>«Собаки в космосе» — В. Губарев</span>
+        <span>«Звёздный час Земли» — Г. Титов</span>
+        <span>«Животные — покорители космоса» — М. Ивановский</span>
+    </div>
+    <div><a href="sources.html">➡️ Полный список источников и литературы</a></div>
+</div>
+
+</body>
+</html>
